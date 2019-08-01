@@ -1,0 +1,13 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\product::class, function (Faker $faker) {
+    return [
+    	'name'=>$faker->name,
+    	'detail'=>$faker->text($maxNbChars = 200),
+    	'price'=>$faker->numberBetween($min = 1000, $max = 9000),
+    	'stock'=>$faker->randomDigitNotNull,
+    	'discount'=>$faker->numberBetween($min = 1, $max = 99),
+    ];
+});

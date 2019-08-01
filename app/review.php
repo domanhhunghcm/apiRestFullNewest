@@ -1,0 +1,13 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class review extends Model
+{
+    public function products(){
+    	return $this->hasOne('App\product','id','product_id');
+    	
+    }
+}
